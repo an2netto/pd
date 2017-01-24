@@ -1,0 +1,6 @@
+#N canvas 734 465 257 296 12;
+#X obj 98 101 dec2bin;
+#X obj 98 126 print;
+#X msg 104 58 4 2 2;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
