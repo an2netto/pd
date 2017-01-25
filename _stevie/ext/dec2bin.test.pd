@@ -1,6 +1,7 @@
-#N canvas 734 465 257 296 12;
-#X obj 98 101 dec2bin;
-#X obj 98 126 print;
-#X msg 104 58 4 2 2;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;
+#N canvas 734 465 460 369 12;
+#X obj 46 127 print;
+#X obj 46 102 dec2bin;
+#X msg 52 59 4 2 2 4 2 2;
+#X text 31 183 \$1 (optional) max binary list length;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
