@@ -1,12 +1,24 @@
-bdsn-pattern 2 3 1 2
 bdsn-onsetid 0 1 0 1
 bdsn-pitch 48 72 49 72.5
-bdsn-duration 20 9 12 8
-bdsn-accent 5 1 1 1
-bdsn-gate 3 0.75 1 0.75
+bdsn-duration 12 9 12 10
+bdsn-accent 5 1.25 1 1
+bdsn-gate 1 0.75 1 0.75
+bdsn-pattern 2 3 1 2
+bang
+bang
+bang
+bang
+bang
 bdsn-pattern 3 2 1 2
+bdsn-onsetid 0 1 0
+bdsn-pitch 48 72 49
 bang
 bang
 bang
-bang
-bang
+bdsn-pattern 3 3 2
+bdsn-onsetid 0 0 0
+bdsn-pitch 48 49 49
+bdsn-duration 20 12 9
+bdsn-gate 3 1 1
+bdsn-accent 5 1 0.75
+bdsn-pattern 6 1 1

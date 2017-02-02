@@ -1,4 +1,4 @@
-#N canvas 226 68 1131 773 12;
+#N canvas 334 168 1131 773 12;
 #X obj 585 472 textfile;
 #X msg 697 214 rewind;
 #X obj 569 323 t b f;
@@ -26,9 +26,6 @@
 #X obj 585 563 sel;
 #X obj 569 299 moses;
 #X obj 837 279 + 1;
-#X msg 861 409 clear;
-#X obj 861 383 list prepend add;
-#X msg 861 358;
 #X obj 585 656 outlet;
 #X obj 149 104 bng 17 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -50,7 +47,7 @@
 #X connect 6 0 5 1;
 #X connect 7 0 5 0;
 #X connect 8 0 24 0;
-#X connect 9 0 38 0;
+#X connect 9 0 35 0;
 #X connect 10 0 13 0;
 #X connect 10 1 23 0;
 #X connect 11 0 7 1;
@@ -70,12 +67,9 @@
 #X connect 25 0 2 0;
 #X connect 25 1 11 0;
 #X connect 26 0 25 1;
-#X connect 27 0 0 0;
-#X connect 28 0 0 0;
-#X connect 29 0 28 0;
-#X connect 31 0 37 0;
-#X connect 34 0 10 0;
-#X connect 36 0 0 0;
-#X connect 37 0 36 0;
-#X connect 38 0 30 0;
+#X connect 28 0 34 0;
+#X connect 31 0 10 0;
+#X connect 33 0 0 0;
+#X connect 34 0 33 0;
+#X connect 35 0 27 0;
 #X coords 0 -1 1 1 68 25 2 100 100;
