@@ -1,0 +1,246 @@
+#N canvas 190 100 1155 660 10;
+#X obj 580 66 bng 20 250 50 0 empty empty empty 17 7 0 10 -241326 -1
+-1;
+#N canvas 872 343 443 326 sampler 0;
+#X obj 253 242 table \$0-buffer;
+#X obj 149 243 soundfiler;
+#X obj 149 185 list append \$0-buffer;
+#X obj 51 72 openpanel;
+#X obj 51 95 list append \$0-buffer;
+#X msg 51 119 read -resize \$1 \$2;
+#X obj 209 69 loadbang;
+#X obj 51 41 inlet;
+#X msg 209 116 \; pd dsp 1;
+#X msg 149 214 read -resize bubul.wav \$1;
+#X connect 2 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 9 0 1 0;
+#X restore 580 92 pd sampler;
+#X text 556 284 grão (ms);
+#X text 407 287 posição (ms);
+#X obj 451 355 s~ \$0-pos;
+#X obj 582 354 s~ \$0-grain;
+#X obj 716 177 nbx 5 14 -1e+37 1e+37 0 0 empty lfnoise-freq empty 0
+-8 0 10 -204800 -1 -1 2 256;
+#X obj 716 288 +~;
+#X obj 716 238 *~;
+#X text 407 334 posição (amostras);
+#X text 556 333 grão (amostras);
+#X obj 451 201 *~;
+#X obj 451 231 +~;
+#X obj 582 194 *~;
+#X obj 582 224 +~;
+#X obj 582 157 noise~;
+#X text 768 269 offset;
+#X obj 451 259 +~;
+#X obj 582 260 +~;
+#X text 613 242 offset;
+#X obj 451 164 noise~;
+#X obj 759 286 nbx 5 14 -1e+37 1e+37 0 0 empty freq-offset empty 0
+-8 0 10 -261682 -1 -1 10 256;
+#X obj 620 197 nbx 5 14 -1e+37 1e+37 0 0 empty grao-amp empty 0 -8
+0 10 -262130 -1 -1 100 256;
+#X obj 617 261 nbx 5 14 -1e+37 1e+37 0 0 empty grao-offset empty 0
+-8 0 10 -261682 -1 -1 100 256;
+#X text 630 177 amp;
+#X text 485 239 offset;
+#X obj 489 197 nbx 5 14 -1e+37 1e+37 0 0 empty pos-amp empty 0 -8 0
+10 -262130 -1 -1 10000 256;
+#X obj 489 258 nbx 5 14 -1e+37 1e+37 0 0 empty pos-offset empty 0 -8
+0 10 -261682 -1 -1 0 256;
+#X text 499 177 amp;
+#X obj 757 241 nbx 5 14 -1e+37 1e+37 0 0 empty freq-amp empty 0 -8
+0 10 -262130 -1 -1 8 256;
+#X text 772 221 amp;
+#X obj 620 217 / 2;
+#X obj 489 217 / 2;
+#X obj 873 18 loadbang;
+#X msg 873 278 \; lfnoise-freq 2 \; freq-amp 60 \; freq-offset 0 \;
+grao-amp 50 \; grao-offset 0 \; pos-amp 10000 \; pos-offset 0;
+#X msg 995 41 \; lfnoise-freq 10 \; freq-amp 5 \; freq-offset 15 \;
+grao-amp 20 \; grao-offset 20 \; pos-amp 500 \; pos-offset 0;
+#X msg 874 395 \; lfnoise-freq 30 \; freq-amp 3 \; freq-offset 10 \;
+grao-amp 10 \; grao-offset 100 \; pos-amp 10000 \; pos-offset 0;
+#X msg 873 159 \; lfnoise-freq 0.5 \; freq-amp 1 \; freq-offset 1 \;
+grao-amp 700 \; grao-offset 100 \; pos-amp 100 \; pos-offset 200;
+#X msg 997 396 \; lfnoise-freq 25 \; freq-amp 0.5 \; freq-offset 0.5
+\; grao-amp 500 \; grao-offset 0 \; pos-amp 500 \; pos-offset 0;
+#X msg 1000 516 \; lfnoise-freq 0.5 \; freq-amp 0.25 \; freq-offset
+0.25 \; grao-amp 100 \; grao-offset 2000 \; pos-amp 5000 \; pos-offset
+0;
+#X msg 873 41 \; lfnoise-freq 2 \; freq-amp 8 \; freq-offset 10 \;
+grao-amp 100 \; grao-offset 100 \; pos-amp 10000 \; pos-offset 0;
+#X msg 875 515 \; lfnoise-freq 10 \; freq-amp 2 \; freq-offset -20
+\; grao-amp 3 \; grao-offset 30 \; pos-amp 200 \; pos-offset 50;
+#X msg 995 159 \; lfnoise-freq 0.5 \; freq-amp 0.5 \; freq-offset -10
+\; grao-amp 1 \; grao-offset 50 \; pos-amp 500 \; pos-offset 500;
+#X msg 997 281 \; lfnoise-freq 0.25 \; freq-amp 1 \; freq-offset -1
+\; grao-amp 1500 \; grao-offset 0 \; pos-amp 10000 \; pos-offset 0
+;
+#X obj 716 333 s~ \$0-freq;
+#X obj 539 442 r~ \$0-freq;
+#X obj 599 521 +~;
+#X obj 647 530 hsl 128 15 0 1 0 0 empty ganho empty -2 -8 0 10 -204786
+-1 -1 0 1;
+#N canvas 0 22 450 300 ganho 0;
+#X obj 206 206 *~;
+#X obj 225 175 line~;
+#X msg 225 149 \$1 10;
+#X obj 225 113 pow 4;
+#X obj 190 245 dac~;
+#X obj 226 60 inlet;
+#X obj 177 60 inlet~;
+#X connect 0 0 4 0;
+#X connect 0 0 4 1;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 5 0 3 0;
+#X connect 6 0 0 0;
+#X restore 599 552 pd ganho;
+#N canvas 142 27 469 503 grao_1 0;
+#X obj 214 406 *~;
+#X obj 229 355 /~ 2;
+#X obj 101 202 r~ \$0-grain;
+#X obj 59 238 *~;
+#X obj 90 324 +~;
+#X obj 85 264 r~ \$0-pos;
+#X obj 210 204 fexpr~ abs($x1[0] - $x1[-1]) > 0.5;
+#X obj 90 356 tabread4~ \$0-buffer;
+#X obj 214 443 outlet~;
+#X text 247 224 transforma em impulso;
+#X obj 156 75 inlet~;
+#X text 145 54 Frequência;
+#X obj 156 101 phasor~;
+#X obj 229 379 creb/sin~;
+#X obj 101 235 cyclone/sah~;
+#X obj 111 300 cyclone/sah~;
+#X connect 0 0 8 0;
+#X connect 1 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 15 0;
+#X connect 6 0 14 1;
+#X connect 6 0 15 1;
+#X connect 7 0 0 0;
+#X connect 10 0 12 0;
+#X connect 12 0 3 0;
+#X connect 12 0 6 0;
+#X connect 12 0 1 0;
+#X connect 13 0 0 1;
+#X connect 14 0 3 1;
+#X connect 15 0 4 1;
+#X restore 539 478 pd grao_1;
+#N canvas 142 27 500 505 grao_2 0;
+#X obj 224 406 *~;
+#X obj 239 355 /~ 2;
+#X obj 111 202 r~ \$0-grain;
+#X obj 69 238 *~;
+#X obj 111 235 sah~;
+#X obj 100 324 +~;
+#X obj 121 300 sah~;
+#X obj 95 264 r~ \$0-pos;
+#X obj 220 204 fexpr~ abs($x1[0] - $x1[-1]) > 0.5;
+#X obj 100 356 tabread4~ \$0-buffer;
+#X obj 224 443 outlet~;
+#X obj 165 68 inlet~;
+#X text 250 227 transforma em impulso;
+#X text 154 45 Frequência;
+#X obj 165 101 phasor~;
+#X msg 228 100 0.5;
+#X obj 228 74 loadbang;
+#X text 263 102 Defasagem;
+#X obj 239 379 creb/sin~;
+#X connect 0 0 10 0;
+#X connect 1 0 18 0;
+#X connect 2 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 9 0;
+#X connect 6 0 5 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 1;
+#X connect 8 0 6 1;
+#X connect 9 0 0 0;
+#X connect 11 0 14 0;
+#X connect 14 0 3 0;
+#X connect 14 0 8 0;
+#X connect 14 0 1 0;
+#X connect 15 0 14 1;
+#X connect 16 0 15 0;
+#X connect 18 0 0 1;
+#X restore 614 475 pd grao_2;
+#X text 708 354 frequência (Hz);
+#X text 31 48 We elaborate a little more on the previous example to
+introduce random controls of the parameters. And so we already have
+a common mechanism of what is called "Granular Synthesis \, " which
+is nothing more generally and grossly speaking than a beautiful grain
+salad being thrown and mixed in a somewhat chaotic manner.;
+#X text 31 136 We still have the same parameters as the previous example.
+The position of the grain start \, grain size and phase signal that
+controls the speed of grain reading.;
+#X text 32 185 However \, the grain height perception also depends
+on grain size \, and not only on the reading frequency. For example
+\, a grain of 1000 ms read at 1 Hz has its original height. Already
+a grain of 2000 ms also read at 1 Hz is read with double speed and
+the perception of height is of an octave above. Therefore \, pitch
+shifting is one of the possible results obtained by granulation.;
+#X text 33 286 To illustrate the potential of possibilities \, we have
+a good number of 10 presets \, with relatively different sound results.
+;
+#X text 34 342 We have two objects [noise ~] to generate a random signal
+of initial position and grain size. We can set the maximum amplitude
+and the offset (minimum value) of both. Each period of the [phasor
+~] defines a grain \, and the signal of the [phasor ~] triggers and
+collects the value of position and size of the grain each cycle.;
+#X text 35 427 The frequency signal of the [phasor ~] is controlled
+by a low frequency noise generator - the [noish ~] - which is like
+a [noise ~] through a sample and hold. Also \, we have a maximum amplitude
+value of this signal and offset (minimum value).;
+#X text 36 501 Also try changing the [noish ~] to a [noisi ~] \, which
+generates a random but interpolated signal. This means that the frequency
+signal will always be tuning or disarranging \, that is \, in a continuous
+glissando. Clearly the result will be quite different.;
+#X text 37 581 The conversion of ms to samples is now done with the
+object [mstosamps ~].;
+#X obj 451 311 cyclone/mstosamps~;
+#X obj 582 309 cyclone/mstosamps~;
+#X obj 716 203 zexy/noish~;
+#X connect 0 0 1 0;
+#X connect 6 0 62 0;
+#X connect 7 0 44 0;
+#X connect 8 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 17 0;
+#X connect 13 0 14 0;
+#X connect 14 0 18 0;
+#X connect 15 0 13 0;
+#X connect 17 0 60 0;
+#X connect 18 0 61 0;
+#X connect 20 0 11 0;
+#X connect 21 0 7 1;
+#X connect 22 0 31 0;
+#X connect 23 0 18 1;
+#X connect 26 0 32 0;
+#X connect 27 0 17 1;
+#X connect 29 0 8 1;
+#X connect 31 0 14 1;
+#X connect 31 0 13 1;
+#X connect 32 0 12 1;
+#X connect 32 0 11 1;
+#X connect 33 0 40 0;
+#X connect 45 0 49 0;
+#X connect 45 0 50 0;
+#X connect 46 0 48 0;
+#X connect 47 0 48 1;
+#X connect 49 0 46 0;
+#X connect 50 0 46 1;
+#X connect 60 0 4 0;
+#X connect 61 0 5 0;
+#X connect 62 0 8 0;
