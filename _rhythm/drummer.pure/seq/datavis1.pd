@@ -1,0 +1,234 @@
+#N struct main float n float x float y array circle-l point array poly-l
+pnt;
+#N struct point float x float y float pa float na float color float
+v;
+#N struct pnt float x float y;
+#N canvas 537 175 655 626 12;
+#N canvas 241 156 772 219 point 0;
+#X obj 43 60 struct point float x float y float pa float na float color
+float v, f 66;
+#X obj 43 94 filledpolygon -v v 0 0 1 na na na pa pa pa pa na;
+#X restore 49 113 pd point;
+#N canvas 168 89 764 754 canvas 0;
+#X scalar main 0 308 296 \; -2.18557e-06 50 2 -2 999 0 \; -3.13953
+49.9013 2 -2 999 0 \; -6.26667 49.6057 2 -2 999 0 \; -9.36907 49.1144
+2 -2 999 0 \; -12.4345 48.4292 2 -2 999 0 \; -15.4509 47.5528 2 -2
+999 0 \; -18.4062 46.4888 2 -2 999 0 \; -21.289 45.2413 2 -2 999 0
+\; -24.0877 43.8153 2 -2 999 0 \; -26.7913 42.2164 2 -2 999 0 \; -29.3893
+40.4509 2 -2 999 0 \; -31.8712 38.5257 2 -2 999 0 \; -34.2274 36.4484
+2 -2 999 0 \; -36.4484 34.2274 2 -2 999 0 \; -38.5257 31.8712 2 -2
+999 0 \; -40.4509 29.3893 2 -2 999 0 \; -42.2164 26.7913 2 -2 999 0
+\; -43.8153 24.0877 2 -2 999 0 \; -45.2414 21.289 2 -2 999 0 \; -46.4888
+18.4062 2 -2 999 0 \; -47.5528 15.4508 2 -2 999 0 \; -48.4292 12.4345
+2 -2 999 0 \; -49.1144 9.36905 2 -2 999 0 \; -49.6057 6.26665 2 -2
+999 0 \; -49.9013 3.13951 2 -2 999 0 \; -50 -4.37114e-06 2 -2 999 0
+\; -49.9013 -3.13953 2 -2 999 0 \; -49.6057 -6.26667 2 -2 999 0 \;
+-49.1144 -9.36907 2 -2 999 0 \; -48.4292 -12.4345 2 -2 999 0 \; -47.5528
+-15.4508 2 -2 999 0 \; -46.4888 -18.4062 2 -2 999 0 \; -45.2414 -21.289
+2 -2 999 0 \; -43.8153 -24.0877 2 -2 999 0 \; -42.2164 -26.7913 2 -2
+999 0 \; -40.4508 -29.3893 2 -2 999 0 \; -38.5257 -31.8712 2 -2 999
+0 \; -36.4484 -34.2274 2 -2 999 0 \; -34.2273 -36.4484 2 -2 999 0 \;
+-31.8712 -38.5257 2 -2 999 0 \; -29.3893 -40.4509 2 -2 999 0 \; -26.7913
+-42.2164 2 -2 999 0 \; -24.0877 -43.8153 2 -2 999 0 \; -21.2889 -45.2414
+2 -2 999 0 \; -18.4062 -46.4888 2 -2 999 0 \; -15.4508 -47.5528 2 -2
+999 0 \; -12.4345 -48.4292 2 -2 999 0 \; -9.36905 -49.1144 2 -2 999
+0 \; -6.26664 -49.6057 2 -2 999 0 \; -3.13953 -49.9013 2 -2 999 0 \;
+5.96244e-07 -50 2 -2 999 0 \; 3.13953 -49.9013 2 -2 999 0 \; 6.26666
+-49.6057 2 -2 999 0 \; 9.36907 -49.1144 2 -2 999 0 \; 12.4345 -48.4292
+2 -2 999 0 \; 15.4509 -47.5528 2 -2 999 0 \; 18.4062 -46.4888 2 -2
+999 0 \; 21.289 -45.2413 2 -2 999 0 \; 24.0877 -43.8153 2 -2 999 0
+\; 26.7913 -42.2164 2 -2 999 0 \; 29.3893 -40.4508 2 -2 999 0 \; 31.8712
+-38.5257 2 -2 999 0 \; 34.2274 -36.4484 2 -2 999 0 \; 36.4484 -34.2273
+2 -2 999 0 \; 38.5257 -31.8712 2 -2 999 0 \; 40.4509 -29.3892 2 -2
+999 0 \; 42.2164 -26.7913 2 -2 999 0 \; 43.8153 -24.0877 2 -2 999 0
+\; 45.2414 -21.2889 2 -2 999 0 \; 46.4888 -18.4062 2 -2 999 0 \; 47.5528
+-15.4508 2 -2 999 0 \; 48.4292 -12.4345 2 -2 999 0 \; 49.1144 -9.36904
+2 -2 999 0 \; 49.6057 -6.26663 2 -2 999 0 \; 49.9013 -3.13949 2 -2
+999 0 \; 50 8.74228e-06 2 -2 999 0 \; 49.9013 3.13954 2 -2 999 0 \;
+49.6057 6.26667 2 -2 999 0 \; 49.1144 9.36908 2 -2 999 0 \; 48.4292
+12.4345 2 -2 999 0 \; 47.5528 15.4509 2 -2 999 0 \; 46.4888 18.4062
+2 -2 999 0 \; 45.2413 21.289 2 -2 999 0 \; 43.8153 24.0877 2 -2 999
+0 \; 42.2164 26.7914 2 -2 999 0 \; 40.4508 29.3893 2 -2 999 0 \; 38.5256
+31.8712 2 -2 999 0 \; 36.4484 34.2274 2 -2 999 0 \; 34.2273 36.4484
+2 -2 999 0 \; 31.8712 38.5257 2 -2 999 0 \; 29.3892 40.4509 2 -2 999
+0 \; 26.7913 42.2164 2 -2 999 0 \; 24.0877 43.8153 2 -2 999 0 \; 21.2889
+45.2414 2 -2 999 0 \; 18.4062 46.4888 2 -2 999 0 \; 15.4508 47.5528
+2 -2 999 0 \; 12.4345 48.4292 2 -2 999 0 \; 9.36905 49.1144 2 -2 999
+0 \; 6.26665 49.6057 2 -2 999 0 \; 3.13951 49.9013 2 -2 999 0 \; \;
+-2.18557e-06 50 \; -50 -4.37114e-06 \; 5.96244e-07 -50 \; 50 8.74228e-06
+\; -2.18557e-06 50 \; \;;
+#X coords 0 0 20 20 20 20 1 0 0;
+#X restore 49 38 pd canvas;
+#N canvas 56 166 655 587 init 0;
+#X msg 209 136 clear;
+#X obj 211 238 pointer;
+#X msg 86 61 bang;
+#X obj 86 37 loadbang;
+#X text 164 64 Initialization;
+#X obj 209 162 s pd-canvas;
+#X msg 211 213 traverse pd-canvas \, bang;
+#X obj 106 271 append main x y;
+#X obj 106 296 s ptr;
+#X obj 441 205 * 2;
+#X obj 441 230 * 0.01;
+#N canvas 410 40 790 822 populate 0;
+#X obj 122 278 setsize main circle;
+#X obj 338 671 element main circle;
+#X floatatom 263 630 5 0 0 0 - - -, f 5;
+#X floatatom 85 155 5 0 0 1 radius - -, f 5;
+#X obj 85 364 until;
+#X obj 85 403 f;
+#X obj 122 403 + 1;
+#X obj 85 434 t f f;
+#X msg 137 364 0, f 2;
+#X obj 85 569 unpack f f f f f f;
+#X msg 85 223 100;
+#X text 131 333 fill array with points;
+#X obj 85 248 t f f;
+#X obj 85 333 t f b;
+#X obj 85 177 t b f;
+#X text 131 249 set number of points;
+#X obj 85 43 inlet;
+#X obj 85 126 f;
+#X obj 85 93 t b a;
+#X msg 338 196 set main \$1;
+#X obj 569 343 r ptr;
+#X obj 85 539 pack f f 4 -4 999 f;
+#X text 203 67 list: array name \, radius \, point size (aka offset
+from (0 \, 0)), f 66;
+#X obj 85 68 unpack s f f;
+#X obj 521 195 * -1;
+#X obj 464 197 * 1;
+#X obj 85 702 set point x y pa na color;
+#X obj 85 463 expr $f2*cos(step*$f1+pi/2) \; $f2*sin(step*$f1+pi/2)
+;
+#X connect 1 0 26 5;
+#X connect 2 0 1 0;
+#X connect 3 0 14 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 7 0 27 0;
+#X connect 7 1 21 5;
+#X connect 8 0 5 1;
+#X connect 9 0 26 0;
+#X connect 9 1 26 1;
+#X connect 9 2 26 2;
+#X connect 9 3 26 3;
+#X connect 9 4 26 4;
+#X connect 9 5 2 0;
+#X connect 10 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 1 0 0;
+#X connect 13 0 4 0;
+#X connect 13 1 8 0;
+#X connect 14 0 10 0;
+#X connect 14 1 27 1;
+#X connect 16 0 23 0;
+#X connect 17 0 3 0;
+#X connect 18 0 17 0;
+#X connect 18 1 19 0;
+#X connect 19 0 0 0;
+#X connect 19 0 1 0;
+#X connect 20 0 0 1;
+#X connect 20 0 1 1;
+#X connect 21 0 9 0;
+#X connect 23 0 18 0;
+#X connect 23 1 17 1;
+#X connect 23 2 25 0;
+#X connect 23 2 24 0;
+#X connect 24 0 21 3;
+#X connect 25 0 21 2;
+#X connect 27 0 21 0;
+#X connect 27 1 21 1;
+#X restore 86 404 pd populate;
+#X obj 86 90 t b b b b b b;
+#X obj 453 173 v pi;
+#X obj 441 255 v step;
+#X obj 441 144 expr 4*atan(1);
+#X msg 86 375 circle-l 50 2;
+#X msg 106 244 308;
+#X msg 151 228 296;
+#X connect 0 0 5 0;
+#X connect 1 0 7 2;
+#X connect 2 0 12 0;
+#X connect 3 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 14 0;
+#X connect 12 0 16 0;
+#X connect 12 1 17 0;
+#X connect 12 2 18 0;
+#X connect 12 3 6 0;
+#X connect 12 4 0 0;
+#X connect 12 5 15 0;
+#X connect 15 0 9 0;
+#X connect 15 0 13 0;
+#X connect 16 0 11 0;
+#X connect 17 0 7 0;
+#X connect 18 0 7 1;
+#X restore 49 188 pd init;
+#N canvas 698 67 585 267 main 0;
+#X text 37 102 color \, line width \, relative x and y;
+#X obj 39 129 plot circle-l 70 0 0 0;
+#X obj 39 199 filledpolygon 0 0 1 -2 -2 -2 2 2 2 2 -2;
+#X obj 39 155 plot poly-l 333 2 0 0;
+#X obj 39 42 struct main float n float x float y array circle-l point
+array poly-l pnt;
+#X restore 49 88 pd main;
+#X obj 282 84 inlet;
+#N canvas 296 580 356 178 pnt 0;
+#X obj 43 60 struct pnt float x float y;
+#X restore 49 138 pd pnt;
+#N canvas 0 22 450 300 origin 0;
+#X floatatom 95 113 5 0 0 2 x - -, f 5;
+#X floatatom 152 78 5 0 0 2 y - -, f 5;
+#X obj 152 110 t b f;
+#X obj 95 151 set main x y;
+#X obj 243 107 r ptr;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 2 1 3 1;
+#X connect 4 0 3 2;
+#X restore 49 211 pd origin;
+#N canvas 0 22 601 655 poly-l 0;
+#X obj 68 243 list-iter;
+#X obj 68 334 element main circle-l;
+#X obj 68 366 get point x y;
+#X obj 301 334 element main poly-l;
+#X obj 68 453 set pnt x y;
+#X obj 490 159 r ptr;
+#X obj 140 202 setsize main poly-l;
+#X obj 68 179 t l l;
+#X obj 140 173 list length;
+#X msg 126 94 \$1, f 2;
+#X obj 68 85 t l l;
+#X obj 68 128 list append;
+#X obj 68 49 inlet;
+#X text 180 121 copy 1st elem to the end of the list to close a polygon
+shape, f 31;
+#X text 84 308 map phase to position;
+#X connect 0 0 1 0;
+#X connect 0 1 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 4 1;
+#X connect 3 0 4 2;
+#X connect 5 0 1 1;
+#X connect 5 0 3 1;
+#X connect 5 0 6 1;
+#X connect 7 0 0 0;
+#X connect 7 1 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 11 1;
+#X connect 10 0 11 0;
+#X connect 10 1 9 0;
+#X connect 11 0 7 0;
+#X connect 12 0 10 0;
+#X restore 282 118 pd poly-l;
+#X text 331 76 list of indices to draw a rhythmic pattern, f 25;
+#X connect 4 0 7 0;
+#X coords 0 0 1 1 130 130 2 292 268;
