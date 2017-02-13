@@ -1,6 +1,0 @@
-#N canvas 307 295 540 541 12;
-#X floatatom 90 126 5 0 0 0 - - -, f 5;
-#X obj 90 195 print;
-#X obj 90 151 reader reader.test.read reader.test.write 3;
-#X connect 0 0 2 0;
-#X connect 2 0 1 0;
