@@ -7,10 +7,10 @@
 #X obj 103 76 unpack;
 #X obj 285 131 inlet;
 #N canvas 212 23 829 855 range 0;
-#X floatatom 103 156 2 1 1e+38 1 qblen - _#0qblen, f 2;
+#X floatatom 103 156 2 1 1e+38 1 qblen qblen _#0qblen, f 2;
 #X obj 58 14 inlet;
 #X obj 58 816 outlet;
-#X floatatom 103 139 2 0 3 1 qbloc - _#0qbloc, f 2;
+#X floatatom 103 139 2 0 3 1 qbloc qbloc _#0qbloc, f 2;
 #X text 92 697 ticks to skip;
 #X obj 307 375 *;
 #X obj 356 339 / 4;
@@ -31,7 +31,7 @@
 #X obj 468 222 t b f;
 #X obj 58 756 mod;
 #X floatatom 120 776 5 0 0 0 - - -, f 5;
-#X obj 103 116 tgl 20 0 \$0_bp \$0bp bp 2 8 0 14 -262144 -1 -1 1 1
+#X obj 103 116 tgl 20 0 \$0_bp \$0bp bp 2 8 0 14 -262144 -1 -1 0 1
 ;
 #X obj 89 280 expr $i1^1;
 #X obj 58 323 spigot;
