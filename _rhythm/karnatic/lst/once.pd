@@ -1,0 +1,22 @@
+#N canvas 0 22 269 321 10;
+#X obj 53 50 inlet;
+#X obj 52 166 spigot;
+#X msg 53 108 1, f 2;
+#X obj 85 145 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 52 188 t a b;
+#X msg 114 178 0, f 2;
+#X obj 52 220 outlet;
+#X obj 53 82 route reload;
+#X text 138 82 as in gun;
+#X obj 128 119 loadbang;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 1 1;
+#X connect 4 0 6 0;
+#X connect 4 1 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 2 0;
+#X connect 7 1 1 0;
+#X connect 9 0 2 0;
