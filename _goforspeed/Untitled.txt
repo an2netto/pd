@@ -1,0 +1,6 @@
+You’ve got two options
+
+[short sample]—-> [effects]
+[constant noise]—–>[effects]—–>[envelope/filter]
+
+after that, there are no rules.
